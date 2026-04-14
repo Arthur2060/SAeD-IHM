@@ -1,13 +1,44 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Nabla";
+  src: url("../public/fonts/Nabla/Nabla-Regular-VariableFont_EDPT\\,EHLT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Audiowide";
+  src: url("../public/fonts/Audiowide/Audiowide-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --primary-color: #d6be33;
   --secondary-color: #f8f8f8;
   --terciary-color: #2e2e2e;
+
+  --primary-font: "Audiowide";
+  --secondary-font: "Roboto";
+
+  --tittle-font: "Nabla";
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h1 {
+  font-family: var(--primary-font);
+}
+
+p {
+  font-family: var(--secondary-font);
+}
+
+.impact-text {
+  font-family: var(--tittle-font);
 }
