@@ -14,6 +14,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../public/fonts/Roboto/RobotoCondensed-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --primary-color: #d6be33;
   --secondary-color: #f8f8f8;
@@ -29,14 +36,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--secondary-font);
 }
 
 h1 {
   font-family: var(--primary-font);
-}
-
-p {
-  font-family: var(--secondary-font);
 }
 
 .impact-text {
