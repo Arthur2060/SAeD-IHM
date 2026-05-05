@@ -14,84 +14,18 @@
   transition: all ease 0.2s;
 }
 
-header {
-  display: flex;
-
+body {
   width: 100%;
-  height: fit-content;
-
-  background-color: var(--primary-color);
-
-  justify-content: center;
-
-  padding: 2%;
-}
-
-header > #utils {
-  display: flex;
-  justify-content: center;
-
-  width: 40%;
-
-  padding: 1%;
+  height: 100vh;
 
   background-color: var(--bg-color);
-  border-radius: 100px;
-}
-
-header > #utils > #url-input {
-  background-color: transparent;
-  color: var(--primary-color);
-
-  border: solid var(--primary-color) 2px;
-}
-
-header > #utils > button,
-header > #utils > input {
-  background-color: transparent;
-
-  border: solid, 2px, black;
-  border-radius: 10px;
-
-  padding: 2%;
-
-  font-weight: bolder;
-}
-
-header > #utils > #connect-btn:hover {
-  background-color: var(--connect-btn-color);
-  color: var(--bg-color);
-}
-header > #utils > #disconnect-btn:hover {
-  background-color: var(--disconnect-btn-color);
-  color: var(--bg-color);
-}
-
-header > #utils > #disconnect-btn {
-  background-color: transparent;
-  color: var(--disconnect-btn-color);
-
-  border-color: var(--disconnect-btn-color);
-}
-
-header > #utils > #connect-btn {
-  background-color: transparent;
-  color: var(--connect-btn-color);
-
-  border-color: var(--connect-btn-color);
 }
 
 main {
-  width: 100%;
-  height: 100vh;
   display: flex;
-
-  align-items: center;
-
-  background-color: var(--bg-color);
+  color: var(--primary-color);
 }
 
-main > #map {
-  display: grid;
-  
+#message-content {
+  font-size: larger;
 }
