@@ -21,9 +21,71 @@ body {
   background-color: var(--bg-color);
 }
 
+header {
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+
+  height: 10vh;
+}
+
+header form {
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+}
+
 main {
   display: flex;
   color: var(--primary-color);
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+header button {
+  border: solid white 2px;
+  border-radius: 0.6em;
+  
+  padding: 2%;
+  
+  font-weight: bold;
+
+  background-color: transparent;
+  color: white;
+}
+
+#connect-btn {
+  border-color: var(--connect-btn-color);
+  color: var(--connect-btn-color);
+}
+
+header button:active{
+  transform: scale(0.8);
+}
+
+#connect-btn:hover {
+  background-color: var(--connect-btn-color);
+  color: var(--bg-color);
+}
+
+#disconnect-btn {
+  border-color: var(--disconnect-btn-color);
+  color: var(--disconnect-btn-color);
+}
+
+#disconnect-btn:hover {
+  background-color: var(--disconnect-btn-color);
+  color: var(--bg-color);
 }
 
 #message-content {
