@@ -1,6 +1,7 @@
 let urlServer = "";
 let map = [[]];
 
+const CONNECT_INPUT = document.querySelector("#connect-input");
 const CONNECT_BTN = document.querySelector("#connect-btn");
 const UPDATE_TARGET_INPUT_X = document.querySelector("#update-target-input-x");
 const UPDATE_TARGET_INPUT_Y = document.querySelector("#update-target-input-y");
@@ -8,12 +9,21 @@ const UPDATE_TARGET_BTN = document.querySelector("#update-target-btn");
 
 CONNECT_BTN.addEventListener("click", (event) => {
     event.preventDefault();
-    urlServer = CONNECT_BTN.value;
+    urlServer = CONNECT_INPUT.value;
     
+    getMap();
 
-
-    CONNECT_BTN.value = "";
+    CONNECT_INPUT.value = "";
 });
+
+UPDATE_TARGET_BTN.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    updateTarget();
+
+    UPDATE_TARGET_INPUT_X.value = "";
+    UPDATE_TARGET_INPUT_Y.value = "";
+})
 
 async function getMap() {
     const resp = await fetch(`http://${urlServer}/map`);
