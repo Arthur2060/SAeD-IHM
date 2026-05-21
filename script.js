@@ -1,4 +1,8 @@
 let urlServer = "";
+let currentPosition = {
+    x: 0,
+    y: 0
+}
 let map = [[]];
 
 const CONNECT_INPUT = document.querySelector("#connect-input");
@@ -47,7 +51,7 @@ async function getMap() {
     });
 }
 
-async function updateTarget(params) {
+async function updateTarget() {
     const resp = await fetch(`http://${urlServer}/target`, {
         method: "PUT",
         headers: {"Content-type": "document/json"},
@@ -57,4 +61,17 @@ async function updateTarget(params) {
     if (!resp.ok) {
         window.alert("Erro ao se conectar com o robô!");
     }
+}
+
+async function getCurrentPosition() {
+    const resp = await fetch(`http://${urlServer}/actual`);
+
+    if (!resp.ok) {
+        window.alert("Erro ao se conectar com o robô!");
+    }
+
+    const data = await resp.json();
+
+    currentPosition.x = data.x;
+    currentPosition.y = data.y;
 }
