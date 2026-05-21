@@ -2,6 +2,9 @@ let urlServer = "";
 let map = [[]];
 
 const CONNECT_BTN = document.querySelector("#connect-btn");
+const UPDATE_TARGET_INPUT_X = document.querySelector("#update-target-input-x");
+const UPDATE_TARGET_INPUT_Y = document.querySelector("#update-target-input-y");
+const UPDATE_TARGET_BTN = document.querySelector("#update-target-btn");
 
 CONNECT_BTN.addEventListener("click", (event) => {
     event.preventDefault();
@@ -32,4 +35,16 @@ async function getMap() {
         });
         actualCollumn++;
     });
+}
+
+async function updateTarget(params) {
+    const resp = await fetch(`http://${urlServer}/target`, {
+        method: "PUT",
+        headers: {"Content-type": "document/json"},
+        body: { UPDATE_TARGET_INPUT_X, UPDATE_TARGET_INPUT_Y }
+    });
+
+    if (!resp.ok) {
+        window.alert("Erro ao se conectar com o robô!");
+    }
 }
