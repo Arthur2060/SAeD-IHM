@@ -3,7 +3,7 @@ const path = require('path');
 const dotenv = require('dotenv').config();
 const cors = require('cors');
 
-const PORT = process.env.PORT || require("/etc/secret/.env").PORT;
+const PORT = process.env.PORT || require("/etc/secrets/.env").PORT;
 const app = express();
 
 app.use(cors());
